@@ -1,8 +1,9 @@
 ### TODO
 - Download Dataset Splits
 - Separate into scenes with pyscenedetect
-- Calculate noise amount
-- Calculate Optical Flow (Farneback)
+- Calculate Optical Flow via OpenCV Farneback
+- Calculate Quality Score via VQA
+- Save all metrics onto SQL
 - Filter as desired
 
 ### Dataset Splits
