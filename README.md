@@ -1,8 +1,14 @@
+### Flags
+- S: Started
+- M: Half
+- C: Close to completition
+- D: Done
+
 ### TODO
 - Download Dataset Splits
-- Separate into scenes with pyscenedetect
+- Separate into scenes with pyscenedetect [C]
 - Calculate Optical Flow via OpenCV Farneback
-- Calculate Quality Score via VQA
+- Calculate Quality Score via VQA (Named TQA: Technical Quality Assesment) [S] 
 - Save all metrics onto SQL
 - Filter as desired
 
