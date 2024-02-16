@@ -15,7 +15,7 @@ ffmpeg -i /home/diffusers/workspace_dep/test/video.mp4 -filter_complex
 
 DATASET_PATH = "/data4/hdvila1m_group/data/"
 CORES_AVAIL = 250
-MAX_VIDEOS = 1000000 # 1M
+MAX_VIDEOS = 1000000 # 1M # float("inf")
 
 def extract_subclips(input_file, video_id, timestamps, output_path, cpu_core):
 
@@ -118,12 +118,12 @@ def worker(data: dict):
 def main():
     dataset = load_dataset("chavinlo/hdvila1m_group", split="train", streaming=True)
 
-    num_processes = 250
+    num_processes = CORES_AVAIL
     print("Number of processes:", num_processes)
 
     pool = mp.Pool(processes=num_processes)
 
-    with tqdm(total=float("inf")) as pbar:
+    with tqdm(total=MAX_VIDEOS) as pbar:
         for _ in pool.imap_unordered(worker, dataset):
             pbar.update(1)
 
