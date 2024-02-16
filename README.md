@@ -1,38 +1,27 @@
-## Flags
-- S: Started
-- M: Half
-- C: Close to completition
-- D: Done
+# dataproc
 
-- W: Worker
-- P: Added onto pipeline
-- D: Data Processed (Finished)
+## List of Techniques
 
-## TODO
-- Download Dataset Splits
-- Separate into scenes with pyscenedetect [WC]
-- Calculate Optical Flow via OpenCV Farneback
-- Calculate Quality Score via VQA (Named TQA: Technical Quality Assesment) [WC]
-- Save all metrics onto SQL
-- Filter as desired
+### SVD
 
-## Dataset Splits
-- 75K Shutterstock (CleanVid)
-- 225K Youtube (HDVILA)
-Total 300K
-
-## Changelog
-- 2/02/2024 Init repo
+- ☑ Clip Extraction: Implemented
+- ☒ Captioning: Proposed implementation is too poor, skipped
+- ☑ Optical Flow: Implemented
+- ☐ Caption Similarities: WIP
+- ☑ Aesthetic Scoring: Implemented along with Technical Scoring
+- ☒ Text Detection: Skipped due to prefference
 
 ## Sources
 
-https://github.com/sayakpaul/single-video-curation-svd
-https://arxiv.org/abs/2311.15127
+- [Sayak's SVD Data Filtering Implementation](https://github.com/sayakpaul/single-video-curation-svd)
+- [SVD Paper](https://arxiv.org/abs/2311.15127)
 
-### SVD's techniques
+## Stages
 
-- Captioning: Too poor imo, not going to be added
-- Clip Extraction: Added
-- Optical Flow: To be Added
-- Similarity Aesthetics: Replaced by DOVER Aesthetic Scoring
-- Text Detection: In Consideration
+### 0. Downloading the Data
+
+#### Lopho's HDVILA 30M
+
+### 1. Clip Separation
+
+Run the dataset through Clip Separation, to process the individual clips as samples.
