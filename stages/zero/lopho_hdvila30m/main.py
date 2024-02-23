@@ -86,7 +86,6 @@ def worker(data: dict):
         url = data["url"]
         timestamps = data["timestamps"]
         worker_id = mp.current_process().name.split("-")[-1]
-        print("Worker", worker_id)
 
         yt = pytube.YouTube(url)
 
