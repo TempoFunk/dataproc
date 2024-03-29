@@ -1,0 +1,4 @@
+- ☐ Aesthetic & Technical Scores
+- ☐ Caption Similarity
+- ☐ Resolution
+- ☐ Word Frequency
